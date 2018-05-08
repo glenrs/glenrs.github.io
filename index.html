@@ -21,8 +21,8 @@
         "accountablePerson" : "",
         "copyrightHolder" : "",
         "copyrightYear" : "2018",
-        "datePublished": "2018-04-09 00:00:00 &#43;0000 UTC",
-        "dateModified" : "2018-04-09 00:00:00 &#43;0000 UTC",
+        "datePublished": "2018-05-08 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2018-05-08 00:00:00 &#43;0000 UTC",
         "url" : "/",
         "wordCount" : "0",
         "keywords" : [ "Blog" ]
@@ -59,7 +59,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-04-09T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2018-05-08T00:00:00&#43;00:00"/>
 
 
 
@@ -276,6 +276,18 @@ ga('send', 'pageview');
                 
                         <article class="mini-post">
                             <header>
+                                <h3><a href="/blog/new-post/">NEW POST</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-05-08'>
+                                    May 8, 2018</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
                                 <h3><a href="/blog/gugletranslate/">GugleTranslate</a></h3>
                                 
                                 <time class="published" datetime=
@@ -302,7 +314,7 @@ ga('send', 'pageview');
   <header>
     <div class="title">
         
-            <h2><a href="/blog/gugletranslate/">GugleTranslate</a></h2>
+            <h2><a href="/blog/new-post/">NEW POST</a></h2>
         
         
     </div>
@@ -310,11 +322,11 @@ ga('send', 'pageview');
         
 
         <time class="published"
-            datetime='2018-04-09'>
-            April 9, 2018</time>
+            datetime='2018-05-08'>
+            May 8, 2018</time>
         <span class="author">Rex Sumsion</span>
         
-            <p>2 minute read</p>
+            <p>1 minute read</p>
         
         
     </div>
@@ -326,41 +338,10 @@ ga('send', 'pageview');
   
 
   <div id="content">
-    <div id="gugletranslate" class="section level2">
-<h2>GugleTranslate</h2>
-<p>Gugle Translate has been designed to “translate” C and Python code. There are some Python libraries such as Cython that help this functionality accross C and Python. Gugle Translate avoids using these libraries in order to allow for the most versatility. The process is designed to execute as described in the image below.</p>
-<div class="figure">
-<img src="/post/2018-05-07-gugletranslate_files/prompt-1.png" />
-
-</div>
-</div>
-<div id="implementation" class="section level2">
-<h2>Implementation</h2>
-<p>Three implementations have been created since some complications arise in Python’s limitations. These limitations occur when compiling the latest python3.6 and C11 versions.</p>
-<ol style="list-style-type: decimal">
-<li><p>Embedded Python3.6 in C11 (Language 1 is C11 and Language 2 is Python3.6). This accomplishes the task as described.</p></li>
-<li><p>Extending Python3.6 with C99 (Language 1 is Python3.6 and Language 2 is C99). Extending Python uses functions that already exist in Python. Although there appears to be ways to update compilation to C11, when newer versions of Python3 are used, these functions default to C99.</p></li>
-<li><p>Extending embedded Python3.6 in C11 (Language 1 is Python3.6 and Language 2 is C11). This implementations allows for the most versatility possible. This implementation allows the user to use the exact versions of C and Python when compiling. The downsight is this does not “start” in Python. C will start, but will then import a python script that will execute. This script calls C embedded modules in Python. Python official documentation <a href="https://docs.python.org/3/extending/embedding.html">Section 1.4</a> comments, “Simply forget for a while that the application starts the Python interpreter.”</p></li>
-</ol>
-</div>
-<div id="execution" class="section level2">
-<h2>Execution</h2>
-<p>The docker image glenrs/gugletranslate has been developed for easy execution of the three implementations. Please run the docker container in interactive mode in order to choose which implementation to run. (code below)</p>
-<pre><code>docker pull glenrs/gugletranslate
-docker run -it --rm glenrs/gugletranslate /bin/bash</code></pre>
-<p>The following three commands will allow for easy execution of the three implementations</p>
-<ol style="list-style-type: decimal">
-<li>Embedded Python3.6 in C11</li>
-</ol>
-<pre><code>./executeC11ToPython3.6.sh</code></pre>
-<ol start="2" style="list-style-type: decimal">
-<li>Extending Python3.6 with C99</li>
-</ol>
-<pre><code>./executePython3.6ToC99.sh</code></pre>
-<ol start="3" style="list-style-type: decimal">
-<li>Extending embedded Python3.6 in C11</li>
-</ol>
-<pre><code>./executePython3.6ToC11.sh</code></pre>
+    <div id="test-run" class="section level2">
+<h2>TEST RUN</h2>
+<pre class="python"><code>print(&quot;This is neat!&quot;)</code></pre>
+<pre><code>## This is neat!</code></pre>
 </div>
 
   </div>
@@ -372,21 +353,6 @@ docker run -it --rm glenrs/gugletranslate /bin/bash</code></pre>
         
             
             
-                <i class="fa fa-folder"></i>
-                
-                
-                <li><a class="article-category-link" href="/categories/c">C</a></li>
-                
-                
-                <li><a class="article-category-link" href="/categories/python">Python</a></li>
-                
-                
-                <li><a class="article-category-link" href="/categories/wrapping">Wrapping</a></li>
-                
-                
-                <li><a class="article-category-link" href="/categories/docker">Docker</a></li>
-                
-            
         
     </ul>
   </li>
@@ -394,21 +360,6 @@ docker run -it --rm glenrs/gugletranslate /bin/bash</code></pre>
     <ul>
         
             
-            
-                <i class="fa fa-tags"></i>
-                
-                
-                <li><a class="article-category-link" href="/tags/c">C</a></li>
-                
-                
-                <li><a class="article-category-link" href="/tags/python">Python</a></li>
-                
-                
-                <li><a class="article-category-link" href="/tags/wrapping">Wrapping</a></li>
-                
-                
-                <li><a class="article-category-link" href="/tags/docker">Docker</a></li>
-                
             
         
     </ul>
@@ -445,6 +396,9 @@ docker run -it --rm glenrs/gugletranslate /bin/bash</code></pre>
 
 <ul class="actions pagination">
     
+        <li><a href="/blog/gugletranslate/"
+                class="button big previous">GugleTranslate</a></li>
+    
 
     
 </ul>
@@ -462,7 +416,7 @@ docker run -it --rm glenrs/gugletranslate /bin/bash</code></pre>
 
 
 <li>
-  <a href="//twitter.com/share?url=%2fblog%2fgugletranslate%2f&amp;text=GugleTranslate&amp;via=RexSumsion" target="_blank" class="share-btn twitter">
+  <a href="//twitter.com/share?url=%2fblog%2fnew-post%2f&amp;text=NEW%20POST&amp;via=RexSumsion" target="_blank" class="share-btn twitter">
     <i class="fa fa-twitter"></i>
     <p>Twitter</p>
     </a>
@@ -481,7 +435,7 @@ docker run -it --rm glenrs/gugletranslate /bin/bash</code></pre>
 
 
 <li>
-  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fgugletranslate%2f&amp;title=GugleTranslate" target="_blank" class="share-btn linkedin">
+  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fnew-post%2f&amp;title=NEW%20POST" target="_blank" class="share-btn linkedin">
       <i class="fa fa-linkedin"></i>
       <p>LinkedIn</p>
     </a>
@@ -497,7 +451,7 @@ docker run -it --rm glenrs/gugletranslate /bin/bash</code></pre>
 
 
 <li>
-  <a href="mailto:?subject=Check out this post by Rex%20Sumsion&amp;body=%2fblog%2fgugletranslate%2f" target="_blank" class="share-btn email">
+  <a href="mailto:?subject=Check out this post by Rex%20Sumsion&amp;body=%2fblog%2fnew-post%2f" target="_blank" class="share-btn email">
     <i class="fa fa-envelope"></i>
     <p>Email</p>
   </a>
@@ -635,6 +589,20 @@ docker run -it --rm glenrs/gugletranslate /bin/bash</code></pre>
           
         
 
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/new-post/">NEW POST</a>
+              </h3>
+              
+              <time class="published" datetime='2018-05-08'>
+                May 8, 2018
+              </time>
+            </header>
+            
+
+          </article>
         
           <article class="mini-post">
             <header>
