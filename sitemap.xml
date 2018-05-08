@@ -3,16 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/blog/camda-cmap-drug-safety-challenge/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/remote-sensing-tree-classification-with-a-multilayer-perceptron/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/blog/gugletranslate/</loc>
     <lastmod>2018-04-09T00:00:00+00:00</lastmod>
   </url>
@@ -50,18 +40,18 @@
   
   <url>
     <loc>/blog/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/c/</loc>
     <lastmod>2018-04-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/c/</loc>
+    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/c/</loc>
     <lastmod>2018-04-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -77,14 +67,8 @@
   </url>
   
   <url>
-    <loc>/categories/data-science/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/data-science/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
+    <loc>/tags/docker/</loc>
+    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -95,152 +79,26 @@
   </url>
   
   <url>
-    <loc>/tags/docker/</loc>
-    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/gradient-boosting/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/gradient-boosting/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/image-recognition/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/image-recognition/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/itemized/</loc>
     <lastmod>2017-06-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/knearest-neighbor/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/knearest-neighbor/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/logistic-regression/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/logistic-regression/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/machine-learning/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/machine-learning/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/multilayer-perceptron/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/multilayer-perceptron/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/naive-bayes/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/naive-bayes/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
+    <loc>/tags/python/</loc>
+    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/python/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/python/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/random-forest/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/random-forest/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
+    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/soft-voting-method/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/soft-voting-method/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/support-vector-machine/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/support-vector-machine/</loc>
-    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
+    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -251,13 +109,13 @@
   </url>
   
   <url>
-    <loc>/categories/wrapping/</loc>
+    <loc>/tags/wrapping/</loc>
     <lastmod>2018-04-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/wrapping/</loc>
+    <loc>/categories/wrapping/</loc>
     <lastmod>2018-04-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

@@ -21,15 +21,6 @@
     </item>
     
     <item>
-      <title>Data Science</title>
-      <link>/tags/data-science/</link>
-      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/data-science/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Docker</title>
       <link>/tags/docker/</link>
       <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
@@ -39,101 +30,11 @@
     </item>
     
     <item>
-      <title>Gradient Boosting</title>
-      <link>/tags/gradient-boosting/</link>
-      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/gradient-boosting/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Image Recognition</title>
-      <link>/tags/image-recognition/</link>
-      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/image-recognition/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>KNearest Neighbor</title>
-      <link>/tags/knearest-neighbor/</link>
-      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/knearest-neighbor/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Logistic Regression</title>
-      <link>/tags/logistic-regression/</link>
-      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/logistic-regression/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Machine Learning</title>
-      <link>/tags/machine-learning/</link>
-      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/machine-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Multilayer Perceptron</title>
-      <link>/tags/multilayer-perceptron/</link>
-      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/multilayer-perceptron/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Naive Bayes</title>
-      <link>/tags/naive-bayes/</link>
-      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/naive-bayes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Python</title>
       <link>/tags/python/</link>
-      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Random Forest</title>
-      <link>/tags/random-forest/</link>
-      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/random-forest/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Soft Voting Method</title>
-      <link>/tags/soft-voting-method/</link>
-      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/soft-voting-method/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Support Vector Machine</title>
-      <link>/tags/support-vector-machine/</link>
-      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/support-vector-machine/</guid>
       <description></description>
     </item>
     

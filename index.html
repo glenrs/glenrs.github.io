@@ -21,8 +21,8 @@
         "accountablePerson" : "",
         "copyrightHolder" : "",
         "copyrightYear" : "2018",
-        "datePublished": "2018-05-07 00:00:00 &#43;0000 UTC",
-        "dateModified" : "2018-05-07 00:00:00 &#43;0000 UTC",
+        "datePublished": "2018-04-09 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2018-04-09 00:00:00 &#43;0000 UTC",
         "url" : "/",
         "wordCount" : "0",
         "keywords" : [ "Blog" ]
@@ -59,7 +59,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-05-07T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2018-04-09T00:00:00&#43;00:00"/>
 
 
 
@@ -266,30 +266,6 @@
                 
                         <article class="mini-post">
                             <header>
-                                <h3><a href="/blog/camda-cmap-drug-safety-challenge/">An Ensemble Approach to Predicting Drug-induced Liver Injury based on RNA Expression Levels</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2018-05-07'>
-                                    May 7, 2018</time>
-                            </header>
-                            
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="/blog/remote-sensing-tree-classification-with-a-multilayer-perceptron/">Remote sensing tree classification with a multilayer perceptron</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2018-05-07'>
-                                    May 7, 2018</time>
-                            </header>
-                            
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
                                 <h3><a href="/blog/gugletranslate/">GugleTranslate</a></h3>
                                 
                                 <time class="published" datetime=
@@ -316,7 +292,7 @@
   <header>
     <div class="title">
         
-            <h2><a href="/blog/camda-cmap-drug-safety-challenge/">An Ensemble Approach to Predicting Drug-induced Liver Injury based on RNA Expression Levels</a></h2>
+            <h2><a href="/blog/gugletranslate/">GugleTranslate</a></h2>
         
         
     </div>
@@ -324,11 +300,11 @@
         
 
         <time class="published"
-            datetime='2018-05-07'>
-            May 7, 2018</time>
+            datetime='2018-04-09'>
+            April 9, 2018</time>
         <span class="author">Rex Sumsion</span>
         
-            <p>8 minute read</p>
+            <p>2 minute read</p>
         
         
     </div>
@@ -340,194 +316,41 @@
   
 
   <div id="content">
-    <p>G. Rex Sumsion1, Michael S. Bradshaw III1, Jeremy T. Beales1, Emi Ford1, Griffin R. G. Caryotakis1, Daniel J. Garrett1, Emily D. LeBaron1, Ifeanyichukwu O. Nwosu1, and Stephen R. Piccolo1,*</p>
-<p>1Brigham Young University, Department of Biology, Provo, UT 84602 (USA)</p>
-<ul>
-<li>Please address correspondence to Stephen R. Piccolo, <a href="mailto:stephen_piccolo@byu.edu">stephen_piccolo@byu.edu</a>.</li>
-</ul>
-<div id="introduction" class="section level2">
-<h2>Introduction</h2>
-<p>Drug-induced liver injury (DILI) remains a serious concern during drug development. Evidence suggests that reactive drug metabolites play a role initiating DILI1. DILI is characterized by elevated levels of alanine aminotransferase, and it can ultimately result in patient death in serious cases. To quantify the effects of drugs on humans, the Connectivity Map (CMap, build 02) data set measures drugs’ impact on RNA expression in cancer cell lines. In this paper we outline an attempt to use RNA expression data before and after drug exposure to predict whether specific drugs in CMap cause hepatic injury. First, we applied seven classification algorithms independently. None of these algorithms predicted liver injury on a consistent basis with high accuracy. In an attempt to improve accuracy, we aggregated predictions for six of the algorithms (excluding one that had performed exceptionally poorly) using a soft-voting ensemble method. This approach improved our results in some cases for the training set but failed to generalize well to the test set. We conclude that more robust methods and/or datasets will be necessary to effectively predict drug-induced liver injury based on RNA expression levels in cell lines.</p>
-</div>
-<div id="methods" class="section level2">
-<h2>Methods</h2>
-<div id="data-pre-processing" class="section level3">
-<h3>Data pre-processing</h3>
-<p>We used the SCAN algorithm2 to normalize the individual CEL files, which we downloaded from the Connectivity Map website (<a href="https://portals.broadinstitute.org/cmap/" class="uri">https://portals.broadinstitute.org/cmap/</a>). Afterward, we used BrainArray annotations to summarize the values at the gene level (using Entrez Gene identifiers)3. We wrote custom Python scripts to rename the output files based on Connectivity Map metadata. The scripts we used to normalize and prepare the data can be found here: <a href="https://osf.io/v3qyg/" class="uri">https://osf.io/v3qyg/</a>.</p>
-<p>For each independent cell line, we averaged gene expression values across the multiple vehicle files. We then subtracted these values from the corresponding gene-expression values for the compounds of interest. We then merged these data into separate files for MCF7 and PC3, respectively.</p>
-</div>
-<div id="feature-selection-and-cross-validation" class="section level3">
-<h3>Feature selection and cross-validation</h3>
-<p>Initially, we used a variance-based, feature-selection approach. However, in performing 10-fold cross validation on the training set, we observed that this approach reduced accuracy, so we excluded it from our final solution. To perform cross-validation, we wrote custom Python code that utilizes the scikit-learn module.</p>
-</div>
-<div id="classification" class="section level3">
-<h3>Classification</h3>
-<p>We performed classification using algorithms from the scikit-learn library (version 0.19.1) for the Python programing language4. We assessed the performance of the following algorithms: Gradient Boosting5, Logistic Regression6, K-nearest Neighbor7, Random Forest8, Multilayer Perceptron9, Support Vector Machines10, and Gaussian Naïve Bayes11.</p>
-<p>For our ensemble classifier, we used the VotingClassifier class in scikit-learn. The ensemble classifier used soft voting, predicting the class label based on the average of the predictions across individual algorithms12.</p>
+    <div id="gugletranslate" class="section level2">
+<h2>GugleTranslate</h2>
+<p>Gugle Translate has been designed to “translate” C and Python code. There are some Python libraries such as Cython that help this functionality accross C and Python. Gugle Translate avoids using these libraries in order to allow for the most versatility. The process is designed to execute as described in the image below.</p>
+<div class="figure">
+<img src="/post/2018-05-07-gugletranslate_files/prompt-1.png" />
+
 </div>
 </div>
-<div id="results" class="section level2">
-<h2>Results</h2>
-<p>Initially, we sought to select optimal parameters for each individual algorithm. We evaluated a variety of parameter combinations for each algorithm, assessing each combination based on its effect on accuracy, specificity, sensitivity, and MCC. For example, in evaluating the “number of trees” hyperparameter for the Random Forest algorithm, we used values ranging between 5 and 100 and found that all 4 metrics performed relatively well at 25 trees (Figure 1). We used a similar approach to optimize additional hyperparameters (tree depth, maximum leaf nodes, minimum number of samples required to split an internal node, minimum samples per leaf) in this same fashion. This approach did not consider possible interactions across hyperparameters; however, it enabled us to visually examine the effects of many parameters. Table 1 is a summary of the parameters used in our final solutions (default values were used unless otherwise noted). The performances of the individual optimized algorithms are also included in Table 1.</p>
-<p>In an attempt to optimize the performance of the ensemble classifier, we assessed several variations of the individual algorithms, at times assigning weights to these algorithms based on their predictive ability and excluding algorithms with weaker performances. The only approach that appeared to have a consistently positive effect on performance was to exclude the Gaussian Naïve Bayes algorithm, which had performed quite poorly in isolation (Table 1). Consequently, we decided to include all individual algorithms (exception Gaussian Naïve Bayes) in our final ensemble classifier and refrained from using weights.</p>
-<p>For our final CAMDA submission, we selected two algorithms (Logistic Regression and Random Forest) to submit independently, in addition to our ensemble method. Final results for these three methods on the test set are shown in Figure 2. We submitted these three methods to the CAMDA competition in the following order: ensemble method, Random Forest, and Logistic Regression. Although the ensemble method resulted in slightly lower performance than the best individual algorithms on the training data, we anticipated that it would yield the best results on the test data because it would be robust to poor performance of individual algorithms while benefiting from the diversity of predictions for the relatively accurate algorithms.</p>
-<p>None of our solutions produced consistently accurate predictions on the test set (Figure 2). Accuracy for the ensemble classifier increased relative to its accuracy on the training dataset?, but it was well below the baseline accuracy (assuming the majority class were predicted by default). A large majority of the test samples were predicted to result in liver injury, resulting in higher sensitivity but lower specificity (Figures 2B-C), likely due to class imbalance.</p>
-</div>
-<div id="discussion" class="section level2">
-<h2>Discussion</h2>
-<p>Using an ensemble method that aggregated predictions from six different classifiers sometimes yielded better performance than the individual algorithms, but this pattern was not consistent. On the test set, the Random Forest and Logistic Regression algorithms outperformed our ensemble approach in some cases. However, none of our methods produced a highly accurate classifier when considering all the metrics.</p>
-<p>Even though the levels of accuracy of our classifiers were higher in the test data than the training data, these values are below baseline expectations due to an increase in class imbalance in the test set. We believe this factor was a key reason that our methods underperformed. It may have been valuable to employ methods that more explicitly account for class imbalance, such as data oversampling, assigning higher weights to the minority class, etc.13.</p>
-</div>
-<div id="acknowledgements" class="section level2">
-<h2>Acknowledgements</h2>
-<p>Participating in this competition provided invaluable educational experiences for the authors of this study, most of whom were members of the Bioinformatics Research Group (BRG) at Brigham Young University. The BRG almost exclusively consists of and is led by undergraduate students. The BRG has three goals: to help students develop research skills, to actively publish research, and to provide students with additional exposure to bioinformatics applications in industry. The BRG meets weekly to pursue these goals. For this competition, we assigned a project leader (GRS) who oversaw the project and mentored less experienced students. We thank the CAMDA organizers for providing the opportunity to participate in this competition and gain experience in this exciting research area.</p>
-</div>
-<div id="references" class="section level2">
-<h2>References</h2>
+<div id="implementation" class="section level2">
+<h2>Implementation</h2>
+<p>Three implementations have been created since some complications arise in Python’s limitations. These limitations occur when compiling the latest python3.6 and C11 versions.</p>
 <ol style="list-style-type: decimal">
-<li>Tailor, A., Faulkner, L., Naisbitt, D. J. &amp; Park, B. K. The chemical, genetic and immunological basis of idiosyncratic drug-induced liver injury. Hum. Exp. Toxicol. 34, 1310-1317 (2015).</li>
-<li>Piccolo, S. R. et al. A single-sample microarray normalization method to facilitate personalized-medicine workflows. Genomics 100, 337-344 (2012).</li>
-<li>Dai, M. et al. Evolving gene/transcript definitions significantly alter the interpretation of GeneChip data. Nucleic Acids Res. 33, e175 (2005). 4.Pedregosa, F. et al. Scikit-learn: machine learning in python. J. Mach. Learn. Res. 12, 2825-2830 (2011).</li>
-<li>Friedman, J. H. Greedy Function Approximation: A Gradient Boosting Machine. Ann. Stat. 29, 1189-1232 (2001).</li>
-<li>Yu, H., Huang, F. &amp; Lin, C. Dual coordinate descent methods for logistic regression and maximum entropy models. Mach. Learn. 85, 41-75 (2011).</li>
-<li>Altman, N. S. An Introduction to Kernel and Nearest-Neighbor Nonparametric Regression. Am. Stat. 46, 175-185 (1992).</li>
-<li>Breiman, L. Random Forests. Mach. Learn. 45, 5-32 (2001).</li>
-<li>Mühlenbein, H. Limitations of multi-layer perceptron networks - steps towards genetic neural networks. Parallel Comput. 14, 249-260 (1990).</li>
-<li>Decoste, D. &amp; Schölkopf, B. Training Invariant Support Vector Machines. Mach. Learn. 46, 161-190 (2002).</li>
-<li>Hand, D. J. &amp; Yu, K. Idiot’s Bayes: Not So Stupid after All? International Statistical Review / Revue Internationale de Statistique 69, 385-398 (2001).</li>
-<li>Opitz, D. &amp; Maclin, R. Popular Ensemble Methods: An Empirical Study. J. ARTIF. INTELL. RES. 11, 169-198 (1999).</li>
-<li>Longadge, R., Dongre, S. &amp; Malik, L. Class Imbalance Problem in Data Mining: Review. International Journal of Computer Science and Network 2 (2013).</li>
+<li><p>Embedded Python3.6 in C11 (Language 1 is C11 and Language 2 is Python3.6). This accomplishes the task as described.</p></li>
+<li><p>Extending Python3.6 with C99 (Language 1 is Python3.6 and Language 2 is C99). Extending Python uses functions that already exist in Python. Although there appears to be ways to update compilation to C11, when newer versions of Python3 are used, these functions default to C99.</p></li>
+<li><p>Extending embedded Python3.6 in C11 (Language 1 is Python3.6 and Language 2 is C11). This implementations allows for the most versatility possible. This implementation allows the user to use the exact versions of C and Python when compiling. The downsight is this does not “start” in Python. C will start, but will then import a python script that will execute. This script calls C embedded modules in Python. Python official documentation <a href="https://docs.python.org/3/extending/embedding.html">Section 1.4</a> comments, “Simply forget for a while that the application starts the Python interpreter.”</p></li>
 </ol>
 </div>
-<div id="figures-and-tables" class="section level2">
-<h2>Figures and Tables</h2>
-<div class="figure">
-<img src="/post/2018-05-07-camda-cmap-drug-safety-challenge_files/optomization.png" />
-
-</div>
-<p>Figure 1: Results of hyperparameter optimization based on the “number of trees” hyperparameter for the Random Forest algorithm. All 4 metrics peaked around 25 trees (red dashed lines).</p>
-<table style="width:88%;">
-<colgroup>
-<col width="18%" />
-<col width="8%" />
-<col width="9%" />
-<col width="8%" />
-<col width="9%" />
-<col width="8%" />
-<col width="9%" />
-<col width="8%" />
-<col width="6%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th>Accuracy-PC3</th>
-<th>Accuracy-MCF7</th>
-<th>Sensitivity-PC3</th>
-<th>Sensitivity-MCF7</th>
-<th>Specificity-PC3</th>
-<th>Specificity-MCF7</th>
-<th>MCC-PC3</th>
-<th>MCC-MCf7</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>sklearn.neural_network.MLPClassifier hidden_layer_sizes=(30,30,30,30,30,30,30,30,30,30), learning_rate_init = 0.0376</td>
-<td>0.63</td>
-<td>0.65</td>
-<td>0.69</td>
-<td>0.69</td>
-<td>0.32</td>
-<td>0.35</td>
-<td>0.01</td>
-<td>0.03</td>
-</tr>
-<tr class="even">
-<td>sklearn.ensemble.GradientBoostingClassifier learning_rate = 0.31, max_depth = 3</td>
-<td>0.67</td>
-<td>0.60</td>
-<td>0.69</td>
-<td>0.67</td>
-<td>0.39</td>
-<td>0.27</td>
-<td>0.04</td>
-<td>-0.05</td>
-</tr>
-<tr class="odd">
-<td>sklearn.neighbors.KNeighborsClassifier n_neighbors=8, weights=‘distance’</td>
-<td>0.68</td>
-<td>0.64</td>
-<td>0.70</td>
-<td>0.72</td>
-<td>0.50</td>
-<td>0.41</td>
-<td>0.11</td>
-<td>0.12</td>
-</tr>
-<tr class="even">
-<td>sklearn.linear_model.LogisticRegression solver=‘lbfgs’</td>
-<td>0.70</td>
-<td>0.62</td>
-<td>0.72</td>
-<td>0.68</td>
-<td>0.57</td>
-<td>0.27</td>
-<td>0.20</td>
-<td>-0.04</td>
-</tr>
-<tr class="odd">
-<td>sklearn.naive_bayes.GaussianNB</td>
-<td>0.35</td>
-<td>0.35</td>
-<td>0.71</td>
-<td>0.73</td>
-<td>0.32</td>
-<td>0.32</td>
-<td>0.02</td>
-<td>0.03</td>
-</tr>
-<tr class="even">
-<td>sklearn.ensemble.RandomForestClassifier n_estimators=25, max_depth=9, min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0, max_leaf_nodes=25, bootstrap=False, random_state=0</td>
-<td>0.66</td>
-<td>0.70</td>
-<td>0.69</td>
-<td>0.72</td>
-<td>0.33</td>
-<td>0.54</td>
-<td>0.01</td>
-<td>0.19</td>
-</tr>
-<tr class="odd">
-<td>sklearn.svm.SVC</td>
-<td>0.68</td>
-<td>0.68</td>
-<td>0.68</td>
-<td>0.68</td>
-<td>nan</td>
-<td>nan</td>
-<td>nan</td>
-<td>nan</td>
-</tr>
-<tr class="even">
-<td>sklearn.ensemble.VotingClassifier voting=‘soft’</td>
-<td>0.68</td>
-<td>0.67</td>
-<td>0.69</td>
-<td>0.69</td>
-<td>0.44</td>
-<td>0.33</td>
-<td>0.06</td>
-<td>0.01</td>
-</tr>
-</tbody>
-</table>
-<p>Table 1: Performance metrics for the individual classifiers (after hyperparameter optimization) and our ensemble method on the training set.</p>
-<div class="figure">
-<img src="/post/2018-05-07-camda-cmap-drug-safety-challenge_files/graphs.png" />
-
-</div>
-<p>Figure 2: Training and test results of our three submitted classification methods. A) shows the classification accuracy compared to baseline expectations. B-D show sensitivity, specificity, and the Matthews Correlation Coefficient (MCC) for the same.</p>
+<div id="execution" class="section level2">
+<h2>Execution</h2>
+<p>The docker image glenrs/gugletranslate has been developed for easy execution of the three implementations. Please run the docker container in interactive mode in order to choose which implementation to run. (code below)</p>
+<pre><code>docker pull glenrs/gugletranslate
+docker run -it --rm glenrs/gugletranslate /bin/bash</code></pre>
+<p>The following three commands will allow for easy execution of the three implementations</p>
+<ol style="list-style-type: decimal">
+<li>Embedded Python3.6 in C11</li>
+</ol>
+<pre><code>./executeC11ToPython3.6.sh</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Extending Python3.6 with C99</li>
+</ol>
+<pre><code>./executePython3.6ToC99.sh</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Extending embedded Python3.6 in C11</li>
+</ol>
+<pre><code>./executePython3.6ToC11.sh</code></pre>
 </div>
 
   </div>
@@ -542,40 +365,16 @@
                 <i class="fa fa-folder"></i>
                 
                 
-                <li><a class="article-category-link" href="/categories/machine-learning">Machine Learning</a></li>
+                <li><a class="article-category-link" href="/categories/c">C</a></li>
                 
                 
                 <li><a class="article-category-link" href="/categories/python">Python</a></li>
                 
                 
-                <li><a class="article-category-link" href="/categories/data-science">Data Science</a></li>
+                <li><a class="article-category-link" href="/categories/wrapping">Wrapping</a></li>
                 
                 
-                <li><a class="article-category-link" href="/categories/image-recognition">Image Recognition</a></li>
-                
-                
-                <li><a class="article-category-link" href="/categories/support-vector-machine">Support Vector Machine</a></li>
-                
-                
-                <li><a class="article-category-link" href="/categories/multilayer-perceptron">Multilayer Perceptron</a></li>
-                
-                
-                <li><a class="article-category-link" href="/categories/random-forest">Random Forest</a></li>
-                
-                
-                <li><a class="article-category-link" href="/categories/knearest-neighbor">KNearest Neighbor</a></li>
-                
-                
-                <li><a class="article-category-link" href="/categories/naive-bayes">Naive Bayes</a></li>
-                
-                
-                <li><a class="article-category-link" href="/categories/logistic-regression">Logistic Regression</a></li>
-                
-                
-                <li><a class="article-category-link" href="/categories/gradient-boosting">Gradient Boosting</a></li>
-                
-                
-                <li><a class="article-category-link" href="/categories/soft-voting-method">Soft Voting Method</a></li>
+                <li><a class="article-category-link" href="/categories/docker">Docker</a></li>
                 
             
         
@@ -589,40 +388,16 @@
                 <i class="fa fa-tags"></i>
                 
                 
-                <li><a class="article-category-link" href="/tags/machine-learning">Machine Learning</a></li>
+                <li><a class="article-category-link" href="/tags/c">C</a></li>
                 
                 
                 <li><a class="article-category-link" href="/tags/python">Python</a></li>
                 
                 
-                <li><a class="article-category-link" href="/tags/data-science">Data Science</a></li>
+                <li><a class="article-category-link" href="/tags/wrapping">Wrapping</a></li>
                 
                 
-                <li><a class="article-category-link" href="/tags/image-recognition">Image Recognition</a></li>
-                
-                
-                <li><a class="article-category-link" href="/tags/support-vector-machine">Support Vector Machine</a></li>
-                
-                
-                <li><a class="article-category-link" href="/tags/multilayer-perceptron">Multilayer Perceptron</a></li>
-                
-                
-                <li><a class="article-category-link" href="/tags/random-forest">Random Forest</a></li>
-                
-                
-                <li><a class="article-category-link" href="/tags/knearest-neighbor">KNearest Neighbor</a></li>
-                
-                
-                <li><a class="article-category-link" href="/tags/naive-bayes">Naive Bayes</a></li>
-                
-                
-                <li><a class="article-category-link" href="/tags/logistic-regression">Logistic Regression</a></li>
-                
-                
-                <li><a class="article-category-link" href="/tags/gradient-boosting">Gradient Boosting</a></li>
-                
-                
-                <li><a class="article-category-link" href="/tags/soft-voting-method">Soft Voting Method</a></li>
+                <li><a class="article-category-link" href="/tags/docker">Docker</a></li>
                 
             
         
@@ -660,9 +435,6 @@
 
 <ul class="actions pagination">
     
-        <li><a href="/blog/remote-sensing-tree-classification-with-a-multilayer-perceptron/"
-                class="button big previous">Remote sensing tree classification with a multilayer perceptron</a></li>
-    
 
     
 </ul>
@@ -680,7 +452,7 @@
 
 
 <li>
-  <a href="//twitter.com/share?url=%2fblog%2fcamda-cmap-drug-safety-challenge%2f&amp;text=An%20Ensemble%20Approach%20to%20Predicting%20Drug-induced%20Liver%20Injury%20based%20on%20RNA%20Expression%20Levels&amp;via=RexSumsion" target="_blank" class="share-btn twitter">
+  <a href="//twitter.com/share?url=%2fblog%2fgugletranslate%2f&amp;text=GugleTranslate&amp;via=RexSumsion" target="_blank" class="share-btn twitter">
     <i class="fa fa-twitter"></i>
     <p>Twitter</p>
     </a>
@@ -699,7 +471,7 @@
 
 
 <li>
-  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fcamda-cmap-drug-safety-challenge%2f&amp;title=An%20Ensemble%20Approach%20to%20Predicting%20Drug-induced%20Liver%20Injury%20based%20on%20RNA%20Expression%20Levels" target="_blank" class="share-btn linkedin">
+  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fgugletranslate%2f&amp;title=GugleTranslate" target="_blank" class="share-btn linkedin">
       <i class="fa fa-linkedin"></i>
       <p>LinkedIn</p>
     </a>
@@ -715,7 +487,7 @@
 
 
 <li>
-  <a href="mailto:?subject=Check out this post by Rex%20Sumsion&amp;body=%2fblog%2fcamda-cmap-drug-safety-challenge%2f" target="_blank" class="share-btn email">
+  <a href="mailto:?subject=Check out this post by Rex%20Sumsion&amp;body=%2fblog%2fgugletranslate%2f" target="_blank" class="share-btn email">
     <i class="fa fa-envelope"></i>
     <p>Email</p>
   </a>
@@ -857,34 +629,6 @@
           <article class="mini-post">
             <header>
               <h3>
-                <a href="/blog/camda-cmap-drug-safety-challenge/">An Ensemble Approach to Predicting Drug-induced Liver Injury based on RNA Expression Levels</a>
-              </h3>
-              
-              <time class="published" datetime='2018-05-07'>
-                May 7, 2018
-              </time>
-            </header>
-            
-
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="/blog/remote-sensing-tree-classification-with-a-multilayer-perceptron/">Remote sensing tree classification with a multilayer perceptron</a>
-              </h3>
-              
-              <time class="published" datetime='2018-05-07'>
-                May 7, 2018
-              </time>
-            </header>
-            
-
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
                 <a href="/blog/gugletranslate/">GugleTranslate</a>
               </h3>
               
@@ -933,83 +677,6 @@
           <article>
             <header>
               
-                <a href="/categories/python/">Python</a>
-                <span style="float:right;">3</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="/categories/data-science/">Data Science</a>
-                <span style="float:right;">2</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="/categories/image-recognition/">Image Recognition</a>
-                <span style="float:right;">2</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="/categories/machine-learning/">Machine Learning</a>
-                <span style="float:right;">2</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="/categories/multilayer-perceptron/">Multilayer Perceptron</a>
-                <span style="float:right;">2</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="/categories/random-forest/">Random Forest</a>
-                <span style="float:right;">2</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="/categories/support-vector-machine/">Support Vector Machine</a>
-                <span style="float:right;">2</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
                 <a href="/categories/c/">C</a>
                 <span style="float:right;">1</span>
               
@@ -1032,51 +699,7 @@
           <article>
             <header>
               
-                <a href="/categories/gradient-boosting/">Gradient Boosting</a>
-                <span style="float:right;">1</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="/categories/knearest-neighbor/">KNearest Neighbor</a>
-                <span style="float:right;">1</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="/categories/logistic-regression/">Logistic Regression</a>
-                <span style="float:right;">1</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="/categories/naive-bayes/">Naive Bayes</a>
-                <span style="float:right;">1</span>
-              
-            </header>
-          </article>
-        </p>
-        
-        <p>
-          <article>
-            <header>
-              
-                <a href="/categories/soft-voting-method/">Soft Voting Method</a>
+                <a href="/categories/python/">Python</a>
                 <span style="float:right;">1</span>
               
             </header>
