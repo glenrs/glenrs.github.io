@@ -1,0 +1,1188 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "/"
+        },
+        "articleSection" : "post",
+        "name" : "Remote sensing tree classification with a multilayer perceptron",
+        "headline" : "Remote sensing tree classification with a multilayer perceptron",
+        "description" : "G. Rex Sumsion1, Michael S. Bradshaw1, Kimball T. Hill1, Lucas D. G. Pinto1, and Stephen R. Piccolo1,*
+Brigham Young University, Department of Biology, Provo, UT 84602 (USA)
+ Please address correspondence to Stephen R. Piccolo, stephen_piccolo@byu.edu.  Abstract To accelerate scientific progress on remote tree classification—as well as biodiversity and ecology sampling—The National Institute of Science and Technology created a community-based competition where scientists were invited to contribute informatics methods for classifying tree species and genus using crown-level images of trees.",
+        "inLanguage" : "en",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2018",
+        "datePublished": "2018-05-07 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2018-05-07 00:00:00 &#43;0000 UTC",
+        "url" : "/post/remote-sensing-tree-classification-with-a-multilayer-perceptron/",
+        "wordCount" : "3084",
+        "keywords" : [ "Machine Learning","Python","Data Science","Image Recognition","Support Vector Machine","Multilayer Perceptron","Random Forest","Blog" ]
+    }
+    </script>
+        
+            
+                <title>Remote sensing tree classification with a multilayer perceptron</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.40.2" />
+        
+
+
+        
+            <meta name="author" content="Rex Sumsion">
+        
+        
+            
+                <meta name="description" content="Data Scientist, Student, Research Assistant">
+            
+        
+
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Remote sensing tree classification with a multilayer perceptron"/>
+<meta name="twitter:description" content="G. Rex Sumsion1, Michael S. Bradshaw1, Kimball T. Hill1, Lucas D. G. Pinto1, and Stephen R. Piccolo1,*
+Brigham Young University, Department of Biology, Provo, UT 84602 (USA)
+ Please address correspondence to Stephen R. Piccolo, stephen_piccolo@byu.edu.  Abstract To accelerate scientific progress on remote tree classification—as well as biodiversity and ecology sampling—The National Institute of Science and Technology created a community-based competition where scientists were invited to contribute informatics methods for classifying tree species and genus using crown-level images of trees."/>
+<meta name="twitter:site" content="@RexSumsion"/>
+
+        <meta property="og:title" content="Remote sensing tree classification with a multilayer perceptron" />
+<meta property="og:description" content="G. Rex Sumsion1, Michael S. Bradshaw1, Kimball T. Hill1, Lucas D. G. Pinto1, and Stephen R. Piccolo1,*
+Brigham Young University, Department of Biology, Provo, UT 84602 (USA)
+ Please address correspondence to Stephen R. Piccolo, stephen_piccolo@byu.edu.  Abstract To accelerate scientific progress on remote tree classification—as well as biodiversity and ecology sampling—The National Institute of Science and Technology created a community-based competition where scientists were invited to contribute informatics methods for classifying tree species and genus using crown-level images of trees." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/remote-sensing-tree-classification-with-a-multilayer-perceptron/" />
+
+
+
+<meta property="article:published_time" content="2018-05-07T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2018-05-07T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+        <meta property="og:image" content="//images/logo.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="512">
+        <meta property="og:image:height" content="512">
+        
+<meta itemprop="name" content="Remote sensing tree classification with a multilayer perceptron">
+<meta itemprop="description" content="G. Rex Sumsion1, Michael S. Bradshaw1, Kimball T. Hill1, Lucas D. G. Pinto1, and Stephen R. Piccolo1,*
+Brigham Young University, Department of Biology, Provo, UT 84602 (USA)
+ Please address correspondence to Stephen R. Piccolo, stephen_piccolo@byu.edu.  Abstract To accelerate scientific progress on remote tree classification—as well as biodiversity and ecology sampling—The National Institute of Science and Technology created a community-based competition where scientists were invited to contribute informatics methods for classifying tree species and genus using crown-level images of trees.">
+
+
+<meta itemprop="datePublished" content="2018-05-07T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-05-07T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="3084">
+
+
+
+<meta itemprop="keywords" content="Machine Learning,Python,Data Science,Image Recognition,Support Vector Machine,Multilayer Perceptron,Random Forest," />
+
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="/css/main.css">
+            <link rel="stylesheet" href="/css/add-on.css">
+            <link rel="stylesheet" href="/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+        
+
+
+  
+    
+    <link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+  
+
+
+      
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="/">post</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="/">
+                            <i class="fa fa-home">&nbsp;</i>Home
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/about/">
+                            <i class="fa fa-id-card-o">&nbsp;</i>About
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/blog/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/itemized/">
+                            <i class="fa fa-list">&nbsp;</i>Itemized
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/categories/">
+                            <i class="fa fa-sitemap">&nbsp;</i>Categories
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/contact/">
+                            <i class="fa fa-envelope-o">&nbsp;</i>Contact
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="as_sitesearch" value="/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="as_sitesearch" value="/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>Home
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/about/">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>About
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/itemized/">
+                            <h3>
+                                <i class="fa fa-list">&nbsp;</i>Itemized
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories/">
+                            <h3>
+                                <i class="fa fa-sitemap">&nbsp;</i>Categories
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/contact/">
+                            <h3>
+                                <i class="fa fa-envelope-o">&nbsp;</i>Contact
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/camda-cmap-drug-safety-challenge/">An Ensemble Approach to Predicting Drug-induced Liver Injury based on RNA Expression Levels</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-05-07'>
+                                    May 7, 2018</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/remote-sensing-tree-classification-with-a-multilayer-perceptron/">Remote sensing tree classification with a multilayer perceptron</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-05-07'>
+                                    May 7, 2018</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/gugletranslate/">GugleTranslate</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-04-09'>
+                                    April 9, 2018</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/creating-a-new-theme/">Creating a New Theme</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2014-09-28'>
+                                    September 28, 2014</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/creating-a-new-theme/" class="image featured">
+            <img src="/img/2014/09/pic03.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/goisforlovers/">(Hu)go Template Primer</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2014-04-02'>
+                                    April 2, 2014</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="/blog/goisforlovers/" class="image featured">
+            <img src="/img/2014/04/pic02.jpg" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /blog/
+                        
+                        class="button">View more posts</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=%2fpost%2fremote-sensing-tree-classification-with-a-multilayer-perceptron%2f&amp;text=Remote%20sensing%20tree%20classification%20with%20a%20multilayer%20perceptron&amp;via=RexSumsion" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=%2fpost%2fremote-sensing-tree-classification-with-a-multilayer-perceptron%2f&amp;title=Remote%20sensing%20tree%20classification%20with%20a%20multilayer%20perceptron" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by Rex%20Sumsion&amp;body=%2fpost%2fremote-sensing-tree-classification-with-a-multilayer-perceptron%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="/post/remote-sensing-tree-classification-with-a-multilayer-perceptron/">Remote sensing tree classification with a multilayer perceptron</a></h1>
+            
+        
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2018-05-07'>
+            May 7, 2018</time>
+        <span class="author">Rex Sumsion</span>
+        
+            <p>15 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+  
+
+  
+
+  <div id="content">
+    <p>G. Rex Sumsion1, Michael S. Bradshaw1, Kimball T. Hill1, Lucas D. G. Pinto1, and Stephen R. Piccolo1,*</p>
+<p>Brigham Young University, Department of Biology, Provo, UT 84602 (USA)</p>
+<ul>
+<li>Please address correspondence to Stephen R. Piccolo, <a href="mailto:stephen_piccolo@byu.edu">stephen_piccolo@byu.edu</a>.</li>
+</ul>
+<div id="abstract" class="section level2">
+<h2>Abstract</h2>
+<p>To accelerate scientific progress on remote tree classification—as well as biodiversity and ecology sampling—The National Institute of Science and Technology created a community-based competition where scientists were invited to contribute informatics methods for classifying tree species and genus using crown-level images of trees. We predicted tree species and genus at the pixel level using hyperspectral and LIDAR observations. We compared three algorithms that have been implemented extensively across a broad range of research applications: support vector machines, random forests, and multilayer perceptron. At the pixel level, the multilayer perceptron algorithm predicted species or genus with high accuracy (92.7 and 95.9%, respectively) on the training data and performed better than the other algorithms (85.8-93.5%). This indicates promise for the use of the MLP algorithm for tree-species classification and coincides with a growing body of research in which neural network-based algorithms outperform other types of classification algorithms for machine vision. To aggregate patterns across the images, we used an ensemble approach that averages the pixel-level outputs of the MLP algorithm to predict species at the crown level. The accuracy of these predictions on the test set was 68.8% for species.</p>
+</div>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>As the earth’s population grows, understanding global ecosystems is becoming more critical to preserving biodiversity and answering ecological questions. Methods for answering such questions have been advanced with improvements in technology. For example, many researchers have begun to explore the effectiveness of using remote-sensing techniques to improve sampling for biodiversity and ecology research.</p>
+<p>Many disciplines have accelerated scientific progress through community-based competitions (Marbach et al., 2010; Prill et al., 2011; Wan &amp; Pal, 2014; Seyednasrollah et al., 2017). Such competitions help to overcome limitations of individual scientific studies that evaluate only a single approach. Many such papers fail to adequately compare their methods against alternative approaches, compare against only a single alternative approach, fail to use common datasets for comparison, or use inconsistent evaluation metrics (Marconi et al.). Therefore, to advance the development of quantitative methods for sampling biodiversity, the National Institute of Standards and Technology (NIST) developed a competition series that allows researchers to evaluate a common high-quality, remote-sensing dataset (provided by the National Ecological Observatory Network) using different quantitative methods. By aggregating and evaluating evidence across these contributions, they hope that more accurate methods will be developed to improve future analyses.</p>
+<p>We focused on task III in this competition: classifying the species or genus of tree crowns from provided hyperspectral and LIDAR (light radar) pixel data. In addition to classifying at the tree crown level, our study compares several machine-learning algorithms’ abilities to classify at the pixel level as done in other studies (Clark, Roberts &amp; Clark, 2005; Castro-Esau et al., 2006; Carlson et al., 2007; Dalponte et al., 2009).</p>
+</div>
+<div id="methods" class="section level2">
+<h2>Methods</h2>
+<div id="data-preprocessing" class="section level3">
+<h3>Data Preprocessing</h3>
+<p>We used both the LIDAR and hyperspectral data to train the implemented algorithms. Since the hyperspectral data column band_426 contained values that were missing for the majority of the data rows, we determined that it would be more simple and consistent to exclude the column entirely from the training data than using an imputation method to deal with missing values. We used all other features in training the implemented algorithms. These features include data associated with the crowns labeled as “other”. For additional details about the image data that were provided as part of the competition, we refer the reader to Marconi, et al.</p>
+</div>
+<div id="algorithm-training" class="section level3">
+<h3>Algorithm Training</h3>
+<p>For diagnostic purposes during training, we used the cross_val_score function in scikit-learn to evaluate classification accuracy via k-fold cross validation (Pedregosa et al., 2011). In performing these evaluations, we use the default of 3 folds.</p>
+</div>
+<div id="classification-algorithms" class="section level3">
+<h3>Classification Algorithms</h3>
+<p>Several prior tree species classification studies used random forests (RF) and support vector machines (SVM) classifiers (Ghosh et al., 2014; Baldeck et al., 2015; Ferreira et al., 2016). Other studies have shown that the multi-layer perceptron (MLP)—a less used algorithm in this field—may be beneficial for tree classification problems that use both LIDAR and hyperspectral imaging. In this study, we implemented the MLP algorithm and compared its performance against that of the SVM and RF algorithms.</p>
+<p>The SVM algorithm creates a hyperplane (a barrier) between observations from two classes, attempting to separate the classes by a maximal margin. This margin is adjusted throughout training until classification error is minimized (Scholkopf et al.). This algorithm is used frequently when there are complicated patterns in data and has been applied frequently to RNA expression data, for example (Statnikov et al., 2005; Statnikov &amp; Aliferis, 2010; Feig et al., 2012; Attur et al., 2015).</p>
+<p>RF classifiers operate by creating a number of decision trees. Each decision tree is constructed by selecting k features randomly; among the k features, a node is created to divide samples based on those features, thus forming a branch in the tree. Node creation is repeated iteratively based on the remaining features. Training occurs via bagging with replacement—that is, random samples are selected from a training set, and trees are fit to those samples. The algorithm then classifies test samples on each tree in the forest and outputs a mode classification. This approach theoretically prevents overfitting because the forest is based on a distribution of decision trees consisting of diverse sets of features (Breiman, 2001).</p>
+<p>Neural networks use several layers of nodes that fall into one of three categories: input, hidden, or output (Kuncheva; Haindl, Kittler &amp; Roli, 2007; Du et al., 2012; Woźniak &amp; Graña, 2014). A node on a given layer will receive a weighted average of the outputs of the previous layer and given its specific weight will contribute to a new weighted average which is propagated down the network until a final output is reached. During training, each node’s weights in the network are optimized with the goal of minimizing error. The assumption is that a network of nodes can gain insight in supervised learning that a single node cannot.</p>
+</div>
+<div id="algorithm-implementations" class="section level3">
+<h3>Algorithm Implementations</h3>
+<p>Each of the classification algorithms provides many hyperparameters that must be selected. Depending on how these hyperparameters are set, the algorithm’s performance can change dramatically. These settings are often optimized by trial and error by the computer scientist—not by structured rules. Some studies have searched to find better ways to optimize certain hyperparameters more effectively, such as the SVM (Chapelle et al., 2002), but it is difficult to know which values will be most effective. For this study, to simplify implementation—and to equally compare the previously mentioned algorithms—we employed these algorithms with default parameters (except as noted below) using the scikit-learn Python library (Pedregosa et al., 2011). For the RF classifier, we used bootstrapping with replacement and no maximum depth for the decision trees. For the SVM algorithm, the default settings included a C value of 1.0 and the radial basis function kernel. The MLP algorithm was implemented using three inner layers. Each inner layer was structured to have exactly 40 nodes. Important default settings to note are the maximum number of training epochs capped at 200 to avoid overfitting the data and a learning rate of 0.001.</p>
+</div>
+<div id="from-the-pixel-level-to-the-crown-level" class="section level3">
+<h3>From the Pixel Level to the Crown Level</h3>
+<p>First, we used the hyperspectral and LIDAR data as inputs to the classification algorithms to predict species and genus for each pixel; next we applied a custom ensemble-averaging method to the pixel-level predictions and used these averaged predictions to make tree crown-level predictions (Figure 1). This ensemble method (Dietterich, 2000) averages the probabilistic predictions across all pixels in a given tree crown. This allows for each input pixel to have a modest impact on the final predictions for the respective tree crown. An assumption of this approach is that although some individual pixels may be predicted incorrectly, a considerable proportion of individual pixels would be predicted correctly, and aggregating evidence across all pixels would lead to correct crown-level predictions.</p>
+<p>The code that we used in this study is available in a GitHub repository at <a href="https://github.com/byubrg/NIST-Competition-Fall-2017" class="uri">https://github.com/byubrg/NIST-Competition-Fall-2017</a>. For details of other methods that were used in the competition, please see the overview paper by Marconi et al..</p>
+</div>
+</div>
+<div id="results" class="section level2">
+<h2>Results</h2>
+<p>First we evaluated the three classification algorithms at the pixel level on the training data. Because many studies in the past only evaluated their algorithms at the pixel level, this study aimed to assess the MLP’s ability to make accurate predictions in this context in relation to the SVM and RF algorithms, which have been used more commonly. Overall, the algorithms predicted genus and species with high accuracy (85.8-95.9%) and attained higher accuracy for genus than for species (Figure 2). One reason for these differing levels of accuracy may be that there were 9 class labels for species but only 5 class labels for genus. However, the MLP algorithm’s performance dropped least from genus to species (95.9% vs. 92.7%). The SVM and RF algorithms attained classification accuracies of 91.1% and 93.5%, respectively, for genus prediction and 85.8% and 86.8% for species predictions (Figure 2). The differences in performance between MLP and the other algorithms are substantial significant enough to suggest that the multilayer perceptron should be explored further for tree classification through remote sensing—perhaps especially when using a relatively large number of labels.</p>
+<p>Our final model used an ensemble-based approach to average pixel-level predictions for the MLP algorithm only. When applied to the competition’s test data, our solution attained an accuracy of 68.8% for crown-level classification (pixel-level predictions were not assessed as part of the final evaluation). Although our solution exceeded the baseline expectation of 66.7% accuracy, our approach failed to generalize well. To better understand these results and how our results compare to other participants’ in the competition, please see the description by Marconi, et al..</p>
+</div>
+<div id="discussion" class="section level2">
+<h2>Discussion</h2>
+<p>As early as 1998, computer vision techniques have been used to answer biological questions. In some of these studies, hyperspectral imagery has been used to differentiate between similarly colored items, such as chlorophyll a and chlorophyll b (Blackburn, 1998). However, it wasn’t until 2005 that computer vision was explored specifically for tree species classification. One of the first such studies explored tree-species classification and evaluated accuracies of pixel-level predictions on the leaf and crown scales (Clark, Roberts &amp; Clark, 2005). In 2006 and 2007, researchers then analyzed the effectiveness of using various wavelengths in an image. These studies found a correlation between higher prediction accuracy and the use of more wavelengths (Castro-Esau et al., 2006; Carlson et al., 2007). It wasn’t until 2009 that a study’s results specifically supported the hypothesis that hyperspectral images provide the highest accuracy (Dalponte et al., 2009). Since that time, many studies have analyzed hyperspectral images to find even more effective algorithms and forms of data representation for remote tree-species classification. One of the most interesting studies combined hyperspectral and LIDAR data to obtain higher accuracies with their algorithms (Alonzo, Bookhagen &amp; Roberts, 2014). This approach is used in our study.</p>
+<p>We selected the MLP algorithm for our final predictive model as a result of its growing popularity in computer vision and its relatively superior performance on our training data. The relatively high accuracy of neural-network based algorithms in general, has led to their use in many recent computer vision studies (Simonyan &amp; Zisserman, 2014; Rawat &amp; Wang, 2017). Its accuracy frequently outperforms other methods (Ciresan, Meier &amp; Schmidhuber, 2012). We found that the MLP algorithm is an effective method for tree classification using hyperspectral and LIDAR imagery. However, when attempting to aggregate those predictions to crown-level observations, the accuracy dropped considerably, even though the prediction accuracy still exceeded random-chance expectations. This drop could be due to oversimplification of our ensemble method. Perhaps a better approach would be to include all three classification algorithms in our ensemble or to use alternative other ensemble methods (Kuncheva; Haindl, Kittler &amp; Roli, 2007; Du et al., 2012; Woźniak &amp; Graña, 2014). Alternatively, it may be more effective to make crown-level predictions directly using hyperspectral and LIDAR values rather than using a hierarchical approach.</p>
+<p>Another potential limitation of our approach is that we used default hyperparameter values for the classification algorithms. Due to the high potential shown by the MLP algorithms, in future studies it would be valuable to optimize hyperparameters and potentially to use a deep learning architecture to fine tune the algorithm’s performance as much as possible.</p>
+</div>
+<div id="bibliography" class="section level2">
+<h2>Bibliography</h2>
+<p>Alonzo M., Bookhagen B., Roberts DA. 2014. Urban tree species mapping using hyperspectral and lidar data fusion. Remote Sensing of Environment148:70–83. DOI: 10.1016/j.rse.2014.03.018.</p>
+<p>Attur M., Krasnokutsky S., Statnikov A., Samuels J., Li Z., Friese O., Hellio Le Graverand-Gastineau M-P., Rybak L., Kraus VB., Jordan JM., Aliferis CF., Abramson SB. 2015. Low-Grade Inflammation in Symptomatic Knee Osteoarthritis: Prognostic Value of Inflammatory Plasma Lipids and Peripheral Blood Leukocyte Biomarkers. Arthritis &amp; Rheumatology67:2905–2915. DOI: 10.1002/art.39279.</p>
+<p>Baldeck CA., Asner GP., Martin RE., Anderson CB., Knapp DE., Kellner JR., Wright SJ. 2015. Operational Tree Species Mapping in a Diverse Tropical Forest with Airborne Imaging Spectroscopy. PLOS ONE 10:e0118403. DOI: 10.1371/journal.pone.0118403. Blackburn GA. 1998. Quantifying Chlorophylls and Caroteniods at Leaf and Canopy Scales. Remote Sensing of Environment66:273–285. DOI: 10.1016/S0034-4257(98)00059-5.</p>
+<p>Breiman L. 2001. Random Forests. Machine Learning 45:5-32. DOI: 10.1023/A:1010933404324.</p>
+<p>Carlson KM., Asner GP., Hughes RF., Ostertag R., Martin RE. 2007. Hyperspectral Remote Sensing of Canopy Biodiversity in Hawaiian Lowland Rainforests. Ecosystems10:536–549. DOI: 10.1007/s10021-007-9041-z.</p>
+<p>Castro-Esau KL., Sanchez-Azofeifa GA., Rivard B., Wright SJ., Quesada M. 2006. Variability in leaf optical properties of Mesoamerican trees and the potential for species classification. American Journal of Botany93:517–530. DOI: 10.3732/ajb.93.4.517.</p>
+<p>Chapelle O., Vapnik V., Bousquet O., Mukherjee S. 2002. Choosing Multiple Parameters for Support Vector Machines. Machine Learning 46:131-159. DOI: 10.1023/A:1012450327387.</p>
+<p>Ciresan D., Meier U., Schmidhuber J. 2012. Multi-column deep neural networks for image classification. In: 2012 IEEE Conference on Computer Vision and Pattern Recognition. IEEE, 3642–3649. DOI: 10.1109/CVPR.2012.6248110.</p>
+<p>Clark ML., Roberts DA., Clark DB. 2005. Hyperspectral discrimination of tropical rain forest tree species at leaf to crown scales. Remote Sensing of Environment96:375–398. DOI: 10.1016/j.rse.2005.03.009.</p>
+<p>Dalponte M., Bruzzone L., Vescovo L., Gianelle D. 2009. The role of spectral resolution and classifier complexity in the analysis of hyperspectral images of forest areas. Remote Sensing of Environment113:2345–2355. DOI: 10.1016/j.rse.2009.06.013.</p>
+<p>Dietterich TG. 2000. Ensemble Methods in Machine Learning. In: Springer, Berlin, Heidelberg, 1–15. DOI: 10.1007/3-540-45014-9_1.</p>
+<p>Ferreira MP., Zortea M., Zanotta DC., Shimabukuro YE., de Souza Filho CR. 2016. Mapping tree species in tropical seasonal semi-deciduous forests with hyperspectral and multispectral data. Remote Sensing of Environment 179:66-78. DOI: 10.1016/j.rse.2016.03.021.</p>
+<p>Du P., Xia J., Zhang W., Tan K., Liu Y., Liu S. 2012. Multiple classifier system for remote sensing image classification: a review. Sensors (Basel, Switzerland)12:4764–92. DOI: 10.3390/s120404764.</p>
+<p>Feig JE., Vengrenyuk Y., Reiser V., Wu C., Statnikov A., Aliferis CF., Garabedian MJ., Fisher EA., Puig O. 2012. Regression of Atherosclerosis Is Characterized by Broad Changes in the Plaque Macrophage Transcriptome. PLoS ONE7:e39790. DOI: 10.1371/journal.pone.0039790.</p>
+<p>Ghosh A., Fassnacht FE., Joshi PK., Kochb B. 2014. A framework for mapping tree species combining hyperspectral and LiDAR data: Role of selected classifiers and sensor across three spatial scales. International Journal of Applied Earth Observation and Geoinformation 26:49-63. DOI: 10.1016/j.jag.2013.05.017.</p>
+<p>Grossberg S. 1988. Nonlinear neural networks: Principles, mechanisms, and architectures. Neural Networks1:17–61. DOI: 10.1016/0893-6080(88)90021-4.</p>
+<p>Haindl M., Kittler J., Roli F. 2007. Multiple classifier systems : 7th international workshop, MCS 2007, Prague, Czech Republic, May 23-25, 2007 : proceedings. Springer.</p>
+<p>KLEENE., C. S. 1956. Representations of events in nerve nets and finite automata. Automata Studies [Annals of Math. Studies 34].</p>
+<p>Kuncheva LI. Multiple Classifier Systems. In: Combining Pattern Classifiers. Hoboken, NJ, USA: John Wiley &amp; Sons, Inc., 101–110. DOI: 10.1002/0471660264.ch3.</p>
+<p>Marconi S., Graves SJ., Gong D., Nia MS., Bras M Le., Dorr J., Fontana P., Gearhart J., Greenberg C., Harris DJ., Arvind S., Nishant A., Prarabdh J., Rege S., Bohlman S., White EP. A data science challenge for converting airborne remote sensing data into ecological information.</p>
+<p>Marbach D., Prill RJ., Schaffter T., Mattiussi C., Floreano D., Stolovitzky G. 2010. Revealing strengths and weaknesses of methods for gene network inference. Proceedings of the National Academy of Sciences of the United States of America107:6286–91. DOI: 10.1073/pnas.0913357107.</p>
+<p>McCulloch WS., Pitts W. 1943. A logical calculus of the ideas immanent in nervous activity. The Bulletin of Mathematical Biophysics5:115–133. DOI: 10.1007/BF02478259.</p>
+<p>Pedregosa F., Varoquaux G., Gramfort A., Michel V., Thirion B., Grisel O., Blondel M., Prettenhofer P., Weiss R., Dubourg V., Vanderplas J., Passos A., Cournapeau D., Brucher M., Perrot M., Duchesnay É. 2011. Scikit-learn: Machine Learning in Python. Journal of Machine Learning Research 12:2825–2830.</p>
+<p>Prill RJ., Saez-Rodriguez J., Alexopoulos LG., Sorger PK., Stolovitzky G. 2011. Crowdsourcing network inference: the DREAM predictive signaling network challenge. Science signaling4:mr7. DOI: 10.1126/scisignal.2002212. Rawat W., Wang Z. 2017. Deep Convolutional Neural Networks for Image Classification: A Comprehensive Review. Neural Computation 29:2352–2449. DOI: 10.1162/neco_a_00990.</p>
+<p>Scholkopf B., Simard P., Smola A., Vapnikt V. Prior Knowledge in Support Vector Kernels. Seyednasrollah F., Koestler DC., Wang T., Piccolo SR., Vega R., Greiner R., Fuchs C., Gofer E., Kumar L., Wolfinger RD., Kanigel Winner K., Bare C., Neto EC., Yu T., Shen L., Abdallah K., Norman T., Stolovitzky G., Soule HR., Sweeney CJ., Ryan CJ., Scher HI., Sartor O., Elo LL., Zhou FL., Guinney J., Costello JC., Community PCDC. 2017. A DREAM Challenge to Build Prediction Models for Short-Term Discontinuation of Docetaxel in Metastatic Castration-Resistant Prostate Cancer. JCO Clinical Cancer Informatics:1–15. DOI: 10.1200/CCI.17.00018.</p>
+<p>Simonyan K., Zisserman A. 2014. Very deep convolutional networks for large-scale image recognition. arXiv preprint arXiv:1409.1556 (2014).</p>
+<p>Statnikov A., Aliferis CF. 2010. Analysis and Computational Dissection of Molecular Signature Multiplicity. PLoS Computational Biology6:e1000790. DOI: 10.1371/journal.pcbi.1000790.</p>
+<p>Statnikov A., Aliferis CF., Tsamardinos I., Hardin D., Levy S. 2005. A comprehensive evaluation of multicategory classification methods for microarray gene expression cancer diagnosis. Bioinformatics21:631–643. DOI: 10.1093/bioinformatics/bti033.</p>
+<p>Wan Q., Pal R. 2014. An Ensemble Based Top Performing Approach for NCI-DREAM Drug Sensitivity Prediction Challenge. PLoS ONE9:e101183. DOI: 10.1371/journal.pone.0101183.</p>
+<p>Woźniak M., Graña M. 2014. A survey of multiple classifier systems as hybrid systems. Information Fusion16:3–17. DOI: 10.1016/J.INFFUS.2013.04.006.</p>
+</div>
+<div id="acknowledgements" class="section level2">
+<h2>Acknowledgements</h2>
+<p>We thank the organizers of the Data-Science Competition for Ecological Data for hosting this competition and guiding us through the process. We acknowledge the Brigham Young University Fulton Supercomputing Laboratory for computational resources that were used for this analysis.</p>
+</div>
+<div id="author-contributions" class="section level2">
+<h2>Author Contributions</h2>
+<p>GRS, MB, KTH, and LP conceived the methodological approach. MB implemented the MLP algorithm and preprocessed the data. GRS implemented the SVM and RF algorithms and wrote the custom ensemble method. GRS created the figures and drafted the manuscript. LP, MB, KTH, and SRP helped in drafting and revising the manuscript. SRP helped in interpreting results. All authors read and approved the final manuscript.</p>
+</div>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="/tags/machine-learning">Machine Learning</a></li>
+                
+                
+                <li><a class="article-category-link" href="/tags/python">Python</a></li>
+                
+                
+                <li><a class="article-category-link" href="/tags/data-science">Data Science</a></li>
+                
+                
+                <li><a class="article-category-link" href="/tags/image-recognition">Image Recognition</a></li>
+                
+                
+                <li><a class="article-category-link" href="/tags/support-vector-machine">Support Vector Machine</a></li>
+                
+                
+                <li><a class="article-category-link" href="/tags/multilayer-perceptron">Multilayer Perceptron</a></li>
+                
+                
+                <li><a class="article-category-link" href="/tags/random-forest">Random Forest</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "shortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="/post/gugletranslate/"
+                class="button big previous">GugleTranslate</a></li>
+    
+
+    
+        <li><a href="/post/camda-cmap-drug-safety-challenge/"
+                class="button big next">An Ensemble Approach to Predicting Drug-induced Liver Injury based on RNA Expression Levels</a></li>
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='/' class="logo"><img src="/img/main/logo.jpg" alt="Hugo Future Imperfect" /></a>
+      
+    
+    
+      <header>
+        <h2>Rex Sumsion</h2>
+        <p>Data Scientist, Student, Research Assistant <i class='fa fa-hand-peace-o'></i></p>
+      </header>
+    
+    
+      <ul class="icons">
+        
+        
+  <li><a href="//github.com/glenrs" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+  <li><a href="//stackoverflow.com/users/9742882/rex-sumsion" target="_blank" title="Stack Overflow" class="fa fa-stack-overflow"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//linkedin.com/in/rex-sumsion-30b19611a" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/RexSumsion" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:grexsumsion@gmail.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Recent Posts</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/camda-cmap-drug-safety-challenge/">An Ensemble Approach to Predicting Drug-induced Liver Injury based on RNA Expression Levels</a>
+              </h3>
+              
+              <time class="published" datetime='2018-05-07'>
+                May 7, 2018
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/remote-sensing-tree-classification-with-a-multilayer-perceptron/">Remote sensing tree classification with a multilayer perceptron</a>
+              </h3>
+              
+              <time class="published" datetime='2018-05-07'>
+                May 7, 2018
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/gugletranslate/">GugleTranslate</a>
+              </h3>
+              
+              <time class="published" datetime='2018-04-09'>
+                April 9, 2018
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/creating-a-new-theme/">Creating a New Theme</a>
+              </h3>
+              
+              <time class="published" datetime='2014-09-28'>
+                September 28, 2014
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/creating-a-new-theme/" class="image featured">
+            <img src="/img/2014/09/pic03.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/goisforlovers/">(Hu)go Template Primer</a>
+              </h3>
+              
+              <time class="published" datetime='2014-04-02'>
+                April 2, 2014
+              </time>
+            </header>
+            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+        
+        
+        
+
+        <a href="/blog/goisforlovers/" class="image featured">
+            <img src="/img/2014/04/pic02.jpg" alt="">
+        </a>
+    
+
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            /blog/
+          
+        class="button">View more posts</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="/categories/">Categories</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                Uncategorized
+                <span style="float:right;">4</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/hugo/">Hugo</a>
+                <span style="float:right;">3</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/go/">Go</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/jekyll/">Jekyll</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/categories/r/">R</a>
+                <span style="float:right;">1</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+    <section id="mini-bio">
+      <h3>About</h3>
+      <p>Junior undergraduate majoring in Bioinformatics and Statistics with a minor in Computer Science and Mathematics at Brigham Young University. Experienced Research Assistant and Group Project Leader. Fluent in Python, R, and Git. Familiar with C, Java, C++, Html and JavaScript.</p>
+      <a href="/about/" class="button">Learn More</a>
+    </section>
+  
+
+  
+  <section id="footer">
+    
+      <ul class="icons">
+        
+        
+  <li><a href="//github.com/glenrs" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+  <li><a href="//stackoverflow.com/users/9742882/rex-sumsion" target="_blank" title="Stack Overflow" class="fa fa-stack-overflow"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//linkedin.com/in/rex-sumsion-30b19611a" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//twitter.com/RexSumsion" target="_blank" title="Twitter" class="fa fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:grexsumsion@gmail.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+    <p class="copyright">
+      
+        &copy; 2018
+        
+          Rex Sumsion
+        
+      .
+      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+      
+      
+      
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+        
+        
+        
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/css.min.js"></script>
+        <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+      
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="/js/util.js"></script>
+      <script src="/js/main.js"></script>
+      <script src="/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      <script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+  </body>
+</html>
+

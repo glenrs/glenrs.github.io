@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C on Rex Sumsion</title>
+    <link>/categories/c/</link>
+    <description>Recent content in C on Rex Sumsion</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 09 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/c/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GugleTranslate</title>
+      <link>/blog/gugletranslate/</link>
+      <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/gugletranslate/</guid>
+      <description>GugleTranslate Gugle Translate has been designed to “translate” C and Python code. There are some Python libraries such as Cython that help this functionality accross C and Python. Gugle Translate avoids using these libraries in order to allow for the most versatility. The process is designed to execute as described in the image below.
+  Implementation Three implementations have been created since some complications arise in Python’s limitations. These limitations occur when compiling the latest python3.</description>
+    </item>
+    
+  </channel>
+</rss>

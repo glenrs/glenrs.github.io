@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Rex Sumsion</title>
+    <link>/blog/</link>
+    <description>Recent content in Blog on Rex Sumsion</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 May 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>An Ensemble Approach to Predicting Drug-induced Liver Injury based on RNA Expression Levels</title>
+      <link>/blog/camda-cmap-drug-safety-challenge/</link>
+      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/camda-cmap-drug-safety-challenge/</guid>
+      <description>G. Rex Sumsion1, Michael S. Bradshaw III1, Jeremy T. Beales1, Emi Ford1, Griffin R. G. Caryotakis1, Daniel J. Garrett1, Emily D. LeBaron1, Ifeanyichukwu O. Nwosu1, and Stephen R. Piccolo1,*
+1Brigham Young University, Department of Biology, Provo, UT 84602 (USA)
+ Please address correspondence to Stephen R. Piccolo, stephen_piccolo@byu.edu.  Introduction Drug-induced liver injury (DILI) remains a serious concern during drug development. Evidence suggests that reactive drug metabolites play a role initiating DILI1.</description>
+    </item>
+    
+    <item>
+      <title>Remote sensing tree classification with a multilayer perceptron</title>
+      <link>/blog/remote-sensing-tree-classification-with-a-multilayer-perceptron/</link>
+      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/remote-sensing-tree-classification-with-a-multilayer-perceptron/</guid>
+      <description>G. Rex Sumsion1, Michael S. Bradshaw1, Kimball T. Hill1, Lucas D. G. Pinto1, and Stephen R. Piccolo1,*
+Brigham Young University, Department of Biology, Provo, UT 84602 (USA)
+ Please address correspondence to Stephen R. Piccolo, stephen_piccolo@byu.edu.  Abstract To accelerate scientific progress on remote tree classification—as well as biodiversity and ecology sampling—The National Institute of Science and Technology created a community-based competition where scientists were invited to contribute informatics methods for classifying tree species and genus using crown-level images of trees.</description>
+    </item>
+    
+    <item>
+      <title>GugleTranslate</title>
+      <link>/blog/gugletranslate/</link>
+      <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/gugletranslate/</guid>
+      <description>GugleTranslate Gugle Translate has been designed to “translate” C and Python code. There are some Python libraries such as Cython that help this functionality accross C and Python. Gugle Translate avoids using these libraries in order to allow for the most versatility. The process is designed to execute as described in the image below.
+  Implementation Three implementations have been created since some complications arise in Python’s limitations. These limitations occur when compiling the latest python3.</description>
+    </item>
+    
+  </channel>
+</rss>
