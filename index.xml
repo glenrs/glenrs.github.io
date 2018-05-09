@@ -6,10 +6,19 @@
     <description>Recent content on Rex Sumsion</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GugleTranslate</title>
+      <link>/itemized/gugletranslate/</link>
+      <pubDate>Tue, 08 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/itemized/gugletranslate/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>GugleTranslate</title>
@@ -19,42 +28,6 @@
       <guid>/blog/gugletranslate/</guid>
       <description>GugleTranslate Gugle Translate has been designed to “translate” C and Python code. There are some Python libraries such as Cython that help this functionality accross C and Python. Gugle Translate avoids using these libraries in order to allow for the most versatility. The process is designed to execute as described in the image below.
   Implementation Three implementations have been created since some complications arise in Python’s limitations. These limitations occur when compiling the latest python3.</description>
-    </item>
-    
-    <item>
-      <title>Fancy App 2</title>
-      <link>/itemized/item2/</link>
-      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/itemized/item2/</guid>
-      <description> App 2 </description>
-    </item>
-    
-    <item>
-      <title>Fancy App 3</title>
-      <link>/itemized/item3/</link>
-      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/itemized/item3/</guid>
-      <description> App 3 </description>
-    </item>
-    
-    <item>
-      <title>Fancy App 4</title>
-      <link>/itemized/item4/</link>
-      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/itemized/item4/</guid>
-      <description> App 4 </description>
-    </item>
-    
-    <item>
-      <title>GugleTranslate</title>
-      <link>/itemized/item1/</link>
-      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/itemized/item1/</guid>
-      <description> App 1 </description>
     </item>
     
   </channel>
